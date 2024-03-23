@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
         //Задача 1
-        int deposit = 15000;
-        int total = 0;
+        double deposit = 15000;
+        double total = 0;
         int month = 0;
         while (total <= 2_459_000) {
             month++;
@@ -38,46 +38,46 @@ public class Main {
         }
         System.out.println();
         //Задача 4
-        int Deposit = 15000;
-        int Month = 0;
-        while (Deposit < 12_000_000) {
-            Month++;
-            Deposit = Deposit + Deposit / 100 * 7;
-            System.out.println("Месяц " + Month + ". Сумма накоплений " + Deposit + " рублей");
+        double bankDeposit = 15000;
+        double monthCounter = 0;
+        while (bankDeposit < 12_000_000) {
+            monthCounter++;
+            bankDeposit = bankDeposit + bankDeposit / 100 * 7;
+            System.out.println("Месяц " + monthCounter + ". Сумма накоплений ~ " + (int) (bankDeposit) + " рублей");
         }
-        System.out.println("12 миллионов накопится за " + Month + " месяцев");
+        System.out.println("12 миллионов накопится за " + monthCounter + " месяцев");
         System.out.println();
         //Задача 5
         //Покуда эта задача - переделка предыдущей, зачем придумывать новые переменные
         //Можно ведь взять старые и присвоить базовые значения
-        Deposit = 15000;
-        Month = 0;
-        while (Deposit < 12_000_000) {
-            Month++;
-            Deposit = Deposit + Deposit / 100 * 7;
-            if (Month % 6 == 0) {
-                System.out.println("Месяц " + Month + ". Сумма накоплений " + Deposit + " рублей");
+        bankDeposit = 15000;
+        monthCounter = 0;
+        while (bankDeposit < 12_000_000) {
+            monthCounter++;
+            bankDeposit = bankDeposit + bankDeposit / 100 * 7;
+            if (monthCounter % 6 == 0) {
+                System.out.println("Месяц " + monthCounter + ". Сумма накоплений " + bankDeposit + " рублей");
             }
         }
         System.out.println();
         //Задача 6
         //Смотри комментарии к задаче №5
-        Deposit = 15000;
-        Month = 0;
-        for (; Month <= (9 * 12); Month++) {
-            Deposit = Deposit + Deposit / 100 * 7;
-            if (Month % 6 == 0) {
-                System.out.println("Месяц " + Month + ". Сумма накоплений " + Deposit + " рублей");
+        bankDeposit = 15000;
+        monthCounter = 0;
+        for (; monthCounter <= (9 * 12); monthCounter++) {
+            bankDeposit = bankDeposit + bankDeposit / 100 * 7;
+            if (monthCounter % 6 == 0) {
+                System.out.println("Месяц " + monthCounter + ". Сумма накоплений ~ " + (int) (bankDeposit) + " рублей");
             }
         }
-        System.out.println("За 9 лет Василий накопит " + Deposit + " рублей");
+        System.out.println("За 9 лет Василий накопит ~ " + (int) (bankDeposit) + " рублей");
         System.out.println();
         //Задача 7
-        int firstFriday = 1;
-        for (int dayNumber = firstFriday; dayNumber <= 31; dayNumber++) {
-            if ((dayNumber - firstFriday) % 7 == 0) {
-                System.out.println("Сегодня пятница, " + dayNumber + "-е число. Необходимо подготовить отчет");
-            }
+        //Так лучше?
+        int fridayNumber = 2;
+        while (fridayNumber <= 31) {
+            System.out.println("Сегодня пятница, " + fridayNumber + "-е число. Необходимо подготовить отчет");
+            fridayNumber = fridayNumber + 7;
         }
         System.out.println();
         //Задача 8
